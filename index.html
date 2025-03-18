@@ -17,7 +17,7 @@
         }
         .video-container {
             max-width: 100%;
-            margin: 0 auto;
+            margin: 20px auto;
             background: #fff;
             padding: 20px;
             border-radius: 8px;
@@ -27,42 +27,27 @@
             width: 100%;
             height: auto;
             border-radius: 8px;
-        }
-        .video-select {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 20px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            font-size: 16px;
+            margin-bottom: 20px; /* 视频之间的间距 */
         }
     </style>
 </head>
 <body>
-    <h1>欢迎观看我的视频</h1>
-    <div class="video-container">
-        <!-- 视频选择下拉菜单 -->
-        <select class="video-select" onchange="changeVideo(this)">
-            <option value="video1.mp4">视频 1</option>
-            <option value="video2.mp4">视频 2</option>
-        </select>
+    <h1>娃娃私密展示</h1>
 
-        <!-- 视频播放器 -->
-        <video id="myVideo" controls>
-            <source src="video1.mp4" type="video/mp4">
+    <!-- 视频 1 -->
+    <div class="video-container">
+        <video controls>
+            <source src="1.mp4" type="video/mp4">
             您的浏览器不支持视频播放。
         </video>
     </div>
 
-    <script>
-        // 切换视频的函数
-        function changeVideo(select) {
-            const videoPlayer = document.getElementById('myVideo');
-            const selectedVideo = select.value; // 获取选中的视频文件名
-            videoPlayer.src = selectedVideo; // 更新视频源
-            videoPlayer.load(); // 重新加载视频
-            videoPlayer.play(); // 自动播放（可选）
-        }
-    </script>
+    <!-- 视频 2 -->
+    <div class="video-container">
+        <video controls>
+            <source src="2.mp4" type="video/mp4">
+            您的浏览器不支持视频播放。
+        </video>
+    </div>
 </body>
 </html>
